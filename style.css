@@ -1,0 +1,266 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: #212f3c;
+  }
+  
+  .settings {
+    width: 100%;
+    height: 220px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+  #score {
+    height: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+  #timer {
+    width: 160px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  button {
+    height: 60px;
+    width: 200px;
+    outline: none;
+    font-size: 30px;
+    font-weight: bolder;
+    cursor: pointer;
+    color: white;
+    background-color: green;
+  }
+  
+  #dropdown {
+    width: 300px;
+    height: 60px;
+    position: relative;
+    z-index: 10;
+  }
+  
+  #low,
+  #medium,
+  #hard,
+  #difficulty {
+    width: 300px;
+    height: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: white;
+    font-size: 30px;
+    font-weight: bolder;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 0;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  
+  #difficulty {
+    background-color: #3498db;
+    z-index: 10;
+  }
+  
+  #difficulty:hover {
+    background-color: #2e86c1;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  
+  #low {
+    background-color: #27ae60;
+  }
+  
+  #low:hover {
+    background-color: #229954;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  
+  #medium {
+    background-color: #8e44ad;
+  }
+  
+  #medium:hover {
+    background-color: #7d3c98;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  
+  #hard {
+    background-color: #e74c3c;
+  }
+  
+  #hard:hover {
+    background-color: #cb4335;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  
+  #dropdown:hover #low {
+    top: 60px;
+  }
+  
+  #dropdown:hover #medium {
+    top: 120px;
+  }
+  
+  #dropdown:hover #hard {
+    top: 180px;
+  }
+  
+  #container {
+    margin-top: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  
+  .card {
+    width: 70px;
+    height: 90px;
+    margin: 2px;
+    background-color: transparent;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    cursor: pointer;
+    -webkit-perspective: 700px;
+            perspective: 700px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  
+  .inner {
+    width: 70px;
+    height: 90px;
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    border-radius: 9px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  
+  .front {
+    width: 70px;
+    height: 90px;
+    position: absolute;
+    background: url("img/card.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    pointer-events: none;
+    border-radius: 10px;
+    z-index: 1;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  
+  .back {
+    width: 70px;
+    height: 90px;
+    position: absolute;
+    background-color: #e5e7e9;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    -webkit-transform: rotateY(-180deg);
+            transform: rotateY(-180deg);
+    pointer-events: none;
+    border-radius: 10px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    z-index: 1;
+  }
+  
+  #best {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    color: white;
+  }
+  
+  #best div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+  
+  #check {
+    margin-top: 30px;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+  }
+  
+  .done .back {
+    background-color: #3498DB;
+  }
+  /*# sourceMappingURL=style.css.map */

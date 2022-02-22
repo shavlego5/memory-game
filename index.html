@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="settings">
+      <div id="score">
+        <div id="best">
+          <h1>Best Score</h1>
+          <div>
+            <h3>Easy :</h3>
+            <h3 id="easy">0</h3>
+          </div>
+          <div>
+            <h3>Medium :</h3>
+            <h3 id="medium0">0</h3>
+          </div>
+          <div>
+            <h3>Hard :</h3>
+            <h3 id="hard0">0</h3>
+          </div>
+        </div>
+        <div id="points"></div>
+      </div>
+
+      <div id="dropdown">
+        <div id="difficulty">Difficulty</div>
+        <div id="low" onclick="setDifficulty(event)">Easy</div>
+        <div id="medium" onclick="setDifficulty(event)">Medium</div>
+        <div id="hard" onclick="setDifficulty(event)">Hard</div>
+      </div>
+
+      <button type="button" onclick="start()">Start</button>
+
+      <div id="timer">Timer : 100 sec</div>
+    </div>
+
+    <div id="container"></div>
+
+    <div id="check"></div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
